@@ -1,5 +1,8 @@
 # Technical Details
 
+
+### Private Keys and Hashing
+
 - Private key is a randomly generated, 256 bit number
     - private key = \\(k\\)
 - multiply (dot) this private key by the Generator point, \\(G\\), (is the same every time) using elliptic curve multiplication (we can choose G)
