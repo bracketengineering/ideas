@@ -24,7 +24,7 @@
     y^2 \mod p= (x^3 +7) \mod p
     \\]
     
-    where $p = 2^{256} - 2^{32} - 2^9 - 2^8- 2^7- 2^6 - 2^4 -1$
+    where \\(p = 2^{256} - 2^{32} - 2^9 - 2^8- 2^7- 2^6 - 2^4 -1\\)
     
 - \\(K=\\) concatenation of the 32 byte x-coordinate and the 32 byte y-coordinate from the elliptic curve multiplication
 - Then use `Keccak-256` on \\(K=\\) to get a useable public ID
