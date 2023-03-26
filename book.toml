@@ -8,3 +8,5 @@ title = "Bracket Engineering Ideas"
 [build]
 build-dir="./docs"
 
+[output.html]
+mathjax-support = true
