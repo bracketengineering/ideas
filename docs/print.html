@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="SMP/overview.html"><strong aria-hidden="true">1.</strong> System Managment Platform</a></li><li class="chapter-item expanded "><a href="CIaaS/overview.html"><strong aria-hidden="true">2.</strong> Cloud Infrastructure Drag and Drop(IaaS)</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="SMP/overview.html"><strong aria-hidden="true">1.</strong> System Managment Platform</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="SMP/tech_info.html"><strong aria-hidden="true">1.1.</strong> The Tech</a></li><li class="chapter-item expanded "><a href="SMP/details.html"><strong aria-hidden="true">1.2.</strong> Details</a></li></ol></li><li class="chapter-item expanded "><a href="CIaaS/overview.html"><strong aria-hidden="true">2.</strong> Cloud Infrastructure Drag and Drop(IaaS)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="CIaaS/tech.html"><strong aria-hidden="true">2.1.</strong> The Tech</a></li><li class="chapter-item expanded "><a href="CIaaS/details.html"><strong aria-hidden="true">2.2.</strong> Details</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -146,7 +146,70 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="system-managment-platform"><a class="header" href="#system-managment-platform">System Managment Platform</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-tech-we-would-use"><a class="header" href="#the-tech-we-would-use">The tech we would use</a></h1>
+<ul>
+<li>The state of the entire system is verified via a hash chain
+<ul>
+<li>the hash chain will be formed via the <code>keccak256</code> of all of the state hashes of all of the devices in the system</li>
+</ul>
+</li>
+<li>on-device software written in C++ or Rust for speed</li>
+<li>built for the ARM architecture</li>
+<li>our main platform will be built in JavaScript, C++, Python
+<ul>
+<li>Servers will be on-premises and backups on the cloud</li>
+</ul>
+</li>
+<li>We will have an API for C/C++, C#, Java, Lisp, MATLAB, Pascal, Python, Rust, HDLs (Future Integration for Carbon)
+<ul>
+<li>API will also allow clients to deploy their own custom code to decide what information they want to be sent (via JSON or Binary) to their devices to control them based on updates/alerts on our platform</li>
+<li>This can be done on our own in-app code platform or on separate, device-specific software</li>
+</ul>
+</li>
+<li>We will use mapping to display the location of devices</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="technical-details"><a class="header" href="#technical-details">Technical Details</a></h1>
+<ul>
+<li>
+<p>Private key is a randomly generated, 256 bit number</p>
+<ul>
+<li>private key = \(k\)</li>
+</ul>
+</li>
+<li>
+<p>multiply (dot) this private key by the Generator point, \(G\), (is the same every time) using elliptic curve multiplication (we can choose G)</p>
+<ul>
+<li>\(G\) is of the form \((x, y)\)</li>
+<li>Elliptic curve multiplication is just Elliptic curve addition up to \(k\)</li>
+<li>\(K = k \cdot G = G + G+ G ...\) (up to k times)</li>
+<li>This gives you a new (very large) point</li>
+<li>Say you want to add two points to get a new point. Addition on an elliptic curve is done by doing.</li>
+</ul>
+<p>\[
+P_1 + P_2 = \dot{P_3}
+\]</p>
+<p>\[
+P_3 = \text{reflection of }\dot{P_3} \text{ in } x \text{ axis } \implies P_3(x, y) = \dot{P_3}{{(x,-y)}}
+\]</p>
+<ul>
+<li>this can be done using a <code>secp256k1</code> library</li>
+<li><code>secp256k1</code> produces the equation:</li>
+</ul>
+<p>\[
+y^2 \mod p= (x^3 +7) \mod p
+\]</p>
+<p>where $p = 2^{256} - 2^{32} - 2^9 - 2^8- 2^7- 2^6 - 2^4 -1$</p>
+</li>
+<li>
+<p>\(K=\) concatenation of the 32 byte x-coordinate and the 32 byte y-coordinate from the elliptic curve multiplication</p>
+</li>
+<li>
+<p>Then use <code>Keccak-256</code> on \(K=\) to get a useable public ID</p>
+</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cloud-infrastructure-drag-and-dropiaas"><a class="header" href="#cloud-infrastructure-drag-and-dropiaas">Cloud Infrastructure Drag and Drop(IaaS)</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-tech"><a class="header" href="#the-tech">The Tech</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="details"><a class="header" href="#details">Details</a></h1>
 
                     </main>
 
