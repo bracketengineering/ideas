@@ -1,8 +1,9 @@
 # Decmeber 2022
 
------
 
-## December 21nd 2022 – *Revising infrastructure*
+## December 21nd 2022 – *Revising infrastructure*
+
+-----
 
 **TLDR;**
 **Things Completed:** Revision of Technical plan

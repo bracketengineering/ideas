@@ -145,16 +145,16 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="january-2023"><a class="header" href="#january-2023">January 2023</a></h1>
-<hr />
 <h2 id="january-9th-2023--update"><a class="header" href="#january-9th-2023--update">January 9th 2023 – <em>Update</em></a></h2>
+<hr />
 <p><strong>TLDR;</strong>
 <strong>Things Completed:</strong> S3 API, Basic Neptune API to add, remove and update vertices. Plan for meal recommendations.
 <strong>Issues:</strong> The JavaScript implementation of Apache Gremlin has holes in its implementation and a huge lack of documentation so have had difficult time with low level commands.
 <strong>Solutions:</strong> Trialling different JavaScript implementations of Gremlin</p>
 <p>Xav’s S3 API completed and working. Xav is now working on a dynamo API 
 Will has basic Neptune working, he is now working on building the recommendation engine, we plan to use basic, non-ML collaborative filtering for the moment. This will consist of computing a cosine similarity matrix between all users which is a normalised value between 0 and 1 which determines how similar one user is to another; 1 being completely alike, 0 being not at all. We then determine how much a user may like a certain meal by multiplying all other user’s similarity values by how much each corresponding user likes that meal. We believe this is a good compromise for accuracy, time, and cost before we can transition to using ML powered recommendations.</p>
+<h2 id="january-23rd-2023--project-update"><a class="header" href="#january-23rd-2023--project-update">January 23rd 2023 – <em>Project Update</em></a></h2>
 <hr />
-<p>## January 23rd 2023 – <em>Project Update</em></p>
 <p><strong>TLDR;</strong> 
 <strong>Things Completed:</strong> Initial static design of main meal card and quick meals meal cards, Recommendation Engine is now completed. Dynamo API also completed
 <strong>Issues:</strong> AWS Cognito SDK not working, is also overly complicated for our use case. 

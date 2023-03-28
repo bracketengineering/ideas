@@ -212,8 +212,8 @@ y^2 \mod p= (x^3 +7) \mod p
 <div style="break-before: page; page-break-before: always;"></div><h1 id="the-tech"><a class="header" href="#the-tech">The Tech</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="details"><a class="header" href="#details">Details</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="november-2022"><a class="header" href="#november-2022">November 2022</a></h1>
-<hr />
 <h2 id="november-9th-2022--first-meeting"><a class="header" href="#november-9th-2022--first-meeting">November 9th 2022 – <em>First Meeting</em></a></h2>
+<hr />
 <p><strong>TLDR;</strong>
 <strong>Things Completed:</strong> Initial Infrastructure plan and design ideas 
 <strong>Issues:</strong> Figuring out how to implement meal recommendations and what databases we will need
@@ -221,15 +221,15 @@ y^2 \mod p= (x^3 +7) \mod p
 <p>We have decided on and initial infrastructure and planned how features are going to work.
 Our current infrastructure plan is as follows: Kubernetes ran on Fargate through EKS for computing. These Kubernetes will contain code to access databases and compute meal recommendations. Our databases will be Neptune for user and meal relationships, DynamoDB for storing simple key-value data pairs and then Redshift for storing metadata for analytics. </p>
 <p>We are currently working on learning how to use Kubernetes, how we need to lay out data in the databases, and how to interact with the databases.</p>
-<hr />
 <h2 id="november-16th-2022--revising-infrastructure"><a class="header" href="#november-16th-2022--revising-infrastructure">November 16th 2022 – <em>Revising Infrastructure</em></a></h2>
+<hr />
 <p><strong>TLDR;</strong>
 <strong>Things Completed:</strong> A new revision of infrastructure and a deeper understanding of database layout.
 Issue: What infrastructure to use
 Solution: Kubernetes are not needed as our system is not big enough plus they are expensive, can use Docker containers with ECS and Fargate on AWS.</p>
 <p>After looking over our current infrastructure, we realised that using Kubernetes would be more effort than it would be worth. Our system was not yet big enough or distributed enough to require Kubernetes. Originally, taking inspiration from how SnapChat’s infrastructure works, we were going to use Kubernetes ran on AWS Fargate through EKS. We found very quickly that this was going to be very expensive but also extremely time consuming to not only set up but also teach ourselves how to use Kubernetes. To save this time and money we are now looking at using Docker containers ran on AWS Fargate though ECS/ECR.</p>
-<hr />
 <h2 id="november-30th-2022--general-update"><a class="header" href="#november-30th-2022--general-update">November 30th 2022 – <em>General update</em></a></h2>
+<hr />
 <p><strong>TLDR;</strong> 
 <strong>Things Completed:</strong> Initial static design of main meal card and quick meals meal cards
 <strong>Issues:</strong> Ran into front-end issues with meal cards moving more on Android devices
@@ -237,8 +237,8 @@ Solution: Kubernetes are not needed as our system is not big enough plus they ar
 <p>Will is currently working on interacting with Neptune and getting a basic API to work. Xav is working on creating an API to interact with AWS S3. George has begun coding the main feature of the app such as, the meal cards for the explore page and quick meals.
 We will be doing less work for the following month as we have exams.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="decmeber-2022"><a class="header" href="#decmeber-2022">Decmeber 2022</a></h1>
+<h2 id="december-21nd-2022--revising-infrastructure"><a class="header" href="#december-21nd-2022--revising-infrastructure">December 21nd 2022 – <em>Revising infrastructure</em></a></h2>
 <hr />
-<p>## December 21nd 2022 – <em>Revising infrastructure</em></p>
 <p><strong>TLDR;</strong>
 <strong>Things Completed:</strong> Revision of Technical plan
 <strong>Issues:</strong> AWS Fargate and Redshift will be too expensive
@@ -248,16 +248,16 @@ This is far beyond our budget, so we decided the best balance between performanc
 <p>Any other additional computing power we need will be completed using short lived EC2 instances. Examples of this could be calculating customer analytics, calculating meal recommendations, or any other internal computing we need doing.</p>
 <p>We will all be taking a short break over the Christmas and New Year Period</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="january-2023"><a class="header" href="#january-2023">January 2023</a></h1>
-<hr />
 <h2 id="january-9th-2023--update"><a class="header" href="#january-9th-2023--update">January 9th 2023 – <em>Update</em></a></h2>
+<hr />
 <p><strong>TLDR;</strong>
 <strong>Things Completed:</strong> S3 API, Basic Neptune API to add, remove and update vertices. Plan for meal recommendations.
 <strong>Issues:</strong> The JavaScript implementation of Apache Gremlin has holes in its implementation and a huge lack of documentation so have had difficult time with low level commands.
 <strong>Solutions:</strong> Trialling different JavaScript implementations of Gremlin</p>
 <p>Xav’s S3 API completed and working. Xav is now working on a dynamo API 
 Will has basic Neptune working, he is now working on building the recommendation engine, we plan to use basic, non-ML collaborative filtering for the moment. This will consist of computing a cosine similarity matrix between all users which is a normalised value between 0 and 1 which determines how similar one user is to another; 1 being completely alike, 0 being not at all. We then determine how much a user may like a certain meal by multiplying all other user’s similarity values by how much each corresponding user likes that meal. We believe this is a good compromise for accuracy, time, and cost before we can transition to using ML powered recommendations.</p>
+<h2 id="january-23rd-2023--project-update"><a class="header" href="#january-23rd-2023--project-update">January 23rd 2023 – <em>Project Update</em></a></h2>
 <hr />
-<p>## January 23rd 2023 – <em>Project Update</em></p>
 <p><strong>TLDR;</strong> 
 <strong>Things Completed:</strong> Initial static design of main meal card and quick meals meal cards, Recommendation Engine is now completed. Dynamo API also completed
 <strong>Issues:</strong> AWS Cognito SDK not working, is also overly complicated for our use case. 
@@ -267,8 +267,8 @@ Will has basic Neptune working, he is now working on building the recommendation
 George is now going to be working on the Account and login pages. This will allow authenticated requests to be made from the client side to the lambda functions. Xav is also going to be helping George implement authentication via AWS Amplify</p>
 <p>Will is now going to start on a web scraper to pull recipes from the internet. Recipes are factual therefore cannot be copyrighted themselves; we will remove any opinion or otherwise copyrightable material to ensure we can use them. </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="february-2023"><a class="header" href="#february-2023">February 2023</a></h1>
+<h2 id="february-11th-2023--sign-up-and-sign-in-functionality-now-working-and-changed-app-name-to-cookly"><a class="header" href="#february-11th-2023--sign-up-and-sign-in-functionality-now-working-and-changed-app-name-to-cookly">February 11th 2023 – <em>Sign up and sign in functionality now working and changed app name to Cookly</em></a></h2>
 <hr />
-<p>## February 11th 2023 – <em>Sign up and sign in functionality now working and changed app name to Cookly</em></p>
 <p><strong>TLDR;</strong>
 <strong>Things Completed:</strong> Authentication scripts using the AWS Amplify Auth Library are now completed. We have added this functionality to the login pages which have also been completed.
 <strong>Issues:</strong> Authentication listeners to allow for automatic sign in after sign up are not working 
@@ -276,15 +276,15 @@ George is now going to be working on the Account and login pages. This will allo
 <p>Firstly, we decided that Quick Meals was not a solid enough name in terms of marketing and likeability. We have changed it to Cookly as we feel it is friendlier and easier to do marketing with. </p>
 <p>We have also finished the sign up and sign in pages and implemented the respective authentication functionality to them. The main issues we had were with the sign up functionality. We wanted an event listener to listen for the sign up event and automatically sign in the user after they signed up. 
 We fixed this issue by changing the event listeners and reconfiguring amplify as the amplify listener we were using was configured to an old user pool. </p>
+<h2 id="february-16th-2023--auto-sign-in-and-all-other-authentication-functionality-for-sign-up-now-working"><a class="header" href="#february-16th-2023--auto-sign-in-and-all-other-authentication-functionality-for-sign-up-now-working">February 16th 2023 – <em>Auto sign in and all other authentication functionality for sign up now working</em></a></h2>
 <hr />
-<p>## February 16th 2023 – <em>Auto sign in and all other authentication functionality for sign up now working</em></p>
 <p><strong>TLDR;</strong>
 <strong>Things Completed:</strong> Check on app load for current session to automatically sign in a user, 
 API scripts for signing out locally and globally, and for sending email confirmation codes. 
 <strong>Issues:</strong> Creating a user in Cognito GUI leaves flag on for password verification meaning getting current session returns nothing
 <strong>Solutions:</strong> Using the actual sign up process with email verification ensures there are no flags for password verification</p>
-<hr />
 <h2 id="february-23rd-2023--api-scripts-for-changing-credentials-now-working"><a class="header" href="#february-23rd-2023--api-scripts-for-changing-credentials-now-working">February 23rd 2023 – <em>API scripts for changing credentials now working</em></a></h2>
+<hr />
 <p><strong>TLDR;</strong>
 <strong>Things Completed:</strong> API scripts for changing and verifying credentials.
 <strong>Issues:</strong> 

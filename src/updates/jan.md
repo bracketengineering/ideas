@@ -1,8 +1,9 @@
 # January 2023
 
-----------
 
 ## January 9th 2023 – *Update*
+
+----------
 
 **TLDR;**
 **Things Completed:** S3 API, Basic Neptune API to add, remove and update vertices. Plan for meal recommendations.
@@ -12,9 +13,10 @@
 Xav’s S3 API completed and working. Xav is now working on a dynamo API 
 Will has basic Neptune working, he is now working on building the recommendation engine, we plan to use basic, non-ML collaborative filtering for the moment. This will consist of computing a cosine similarity matrix between all users which is a normalised value between 0 and 1 which determines how similar one user is to another; 1 being completely alike, 0 being not at all. We then determine how much a user may like a certain meal by multiplying all other user’s similarity values by how much each corresponding user likes that meal. We believe this is a good compromise for accuracy, time, and cost before we can transition to using ML powered recommendations.
 
------
 
-## January 23rd 2023 – *Project Update*
+## January 23rd 2023 – *Project Update*
+
+-----
 
 **TLDR;** 
 **Things Completed:** Initial static design of main meal card and quick meals meal cards, Recommendation Engine is now completed. Dynamo API also completed
