@@ -147,10 +147,12 @@
                         <h1 id="decmeber-2022"><a class="header" href="#decmeber-2022">Decmeber 2022</a></h1>
 <h2 id="december-21nd-2022--revising-infrastructure"><a class="header" href="#december-21nd-2022--revising-infrastructure">December 21nd 2022 – <em>Revising infrastructure</em></a></h2>
 <hr />
-<p><strong>TLDR;</strong>
-<strong>Things Completed:</strong> Revision of Technical plan
-<strong>Issues:</strong> AWS Fargate and Redshift will be too expensive
-<strong>Solutions:</strong> Using AWS Lambda instead of Fargate, and using S3 to store metadata instead of in redshift</p>
+<p><strong>TLDR;</strong></p>
+<ul>
+<li><strong>Things Completed:</strong> Revision of Technical plan</li>
+<li><strong>Issues:</strong> AWS Fargate and Redshift will be too expensive</li>
+<li><strong>Solutions:</strong> Using AWS Lambda instead of Fargate, and using S3 to store metadata instead of in redshift</li>
+</ul>
 <p>After going over our use case and what services we need, we realised we had underestimated the size of data we would need, but more importantly, the full costs of using a big enough system with Fargate and Redshift. The costs from using Fargate with ECS and Redshift Serverless would cost anywhere from $500 to $300 USD per month (depending on how many containers run on Fargate and how many hours we need to use Redshift for) 
 This is far beyond our budget, so we decided the best balance between performance and cost is AWS Lambda and S3. We will store user metadata in S3 so that it can be used later for customer analytics. AWS Lambda will provide us with very cheap, easy to use and access compute power for the simple requests that will be coming into our infrastructure. </p>
 <p>Any other additional computing power we need will be completed using short lived EC2 instances. Examples of this could be calculating customer analytics, calculating meal recommendations, or any other internal computing we need doing.</p>

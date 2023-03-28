@@ -6,9 +6,9 @@
 ------
 
 **TLDR;**
-**Things Completed:** Authentication scripts using the AWS Amplify Auth Library are now completed. We have added this functionality to the login pages which have also been completed.
-**Issues:** Authentication listeners to allow for automatic sign in after sign up are not working 
-**Solutions:** Reconfigured AWS amplify with cognito and changed our listeners to listen to all Auth events instead of specific events
+- **Things Completed:** Authentication scripts using the AWS Amplify Auth Library are now completed. We have added this functionality to the login pages which have also been completed.
+- **Issues:** Authentication listeners to allow for automatic sign in after sign up are not working 
+- **Solutions:** Reconfigured AWS amplify with cognito and changed our listeners to listen to all Auth events instead of specific events
 
 Firstly, we decided that Quick Meals was not a solid enough name in terms of marketing and likeability. We have changed it to Cookly as we feel it is friendlier and easier to do marketing with. 
 
@@ -21,10 +21,10 @@ We fixed this issue by changing the event listeners and reconfiguring amplify as
 ------
 
 **TLDR;**
-**Things Completed:** Check on app load for current session to automatically sign in a user, 
+- **Things Completed:** Check on app load for current session to automatically sign in a user, 
 API scripts for signing out locally and globally, and for sending email confirmation codes. 
-**Issues:** Creating a user in Cognito GUI leaves flag on for password verification meaning getting current session returns nothing
-**Solutions:** Using the actual sign up process with email verification ensures there are no flags for password verification
+- **Issues:** Creating a user in Cognito GUI leaves flag on for password verification meaning getting current session returns nothing
+- **Solutions:** Using the actual sign up process with email verification ensures there are no flags for password verification
 
 
 ## February 23rd 2023 – *API scripts for changing credentials now working*
@@ -32,9 +32,9 @@ API scripts for signing out locally and globally, and for sending email confirma
 ------
 
 **TLDR;**
-**Things Completed:** API scripts for changing and verifying credentials.
-**Issues:** 
-**Solutions:**
+- **Things Completed:** API scripts for changing and verifying credentials.
+- **Issues:** 
+- **Solutions:**
 
 Xav has finished writing all the scripts for changing and updating attributes. 
 
