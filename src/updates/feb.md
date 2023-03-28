@@ -1,6 +1,6 @@
 # February 2023
 
----
+------
 
 ## February 11th 2023 – *Sign up and sign in functionality now working and changed app name to Cookly*
 
@@ -14,7 +14,7 @@ Firstly, we decided that Quick Meals was not a solid enough name in terms of mar
 We have also finished the sign up and sign in pages and implemented the respective authentication functionality to them. The main issues we had were with the sign up functionality. We wanted an event listener to listen for the sign up event and automatically sign in the user after they signed up. 
 We fixed this issue by changing the event listeners and reconfiguring amplify as the amplify listener we were using was configured to an old user pool. 
 
----
+------
 
 ## February 16th 2023 – *Auto sign in and all other authentication functionality for sign up now working*
 
@@ -24,7 +24,7 @@ API scripts for signing out locally and globally, and for sending email confirma
 **Issues:** Creating a user in Cognito GUI leaves flag on for password verification meaning getting current session returns nothing
 **Solutions:** Using the actual sign up process with email verification ensures there are no flags for password verification
 
----
+------
 
 ## February 23rd 2023 – *API scripts for changing credentials now working*
 

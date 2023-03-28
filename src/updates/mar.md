@@ -1,8 +1,8 @@
 # March 2023
 
--------
+-------------
 
-## March 1st 2023: All Low Level Backend APIs now configured as a class and all page design finished
+## March 1st 2023: *All Low Level Backend APIs now configured as a class and all page design finished*
 
 **TLDR;**
 - **Things Completed:** Converted the Dynamo, S3 and Neptune APIs to classes, all front end page design has been finished
@@ -34,9 +34,9 @@ await class.method(params);
 ```
 
 
----
+------
 
-## March 5th 2023 – Completed website
+## March 5th 2023 – *Completed website*
 
 **TLDR;**
 - **Things Completed:** Landing page, Team about page, and Cookly page are completed
@@ -45,18 +45,18 @@ await class.method(params);
 
 The landing page is a simple page with navigation links. The Team page just gives an overview who we all are and what our respective roles are within the company. The cookly page gives a product overview of the app; we are waiting on infographics from George to finish that bit completely
 
----
+------
 
-## March 10th 2023 – Code for Lambda functions now completed
+## March 10th 2023 – *Code for Lambda functions now completed*
 
 **TLDR;**
 - **Things Completed:** High level lambda functions are now complete.
 - **Issues:** 
 - **Solutions:**
 
----
+------
 
-## March 14th 2023 – Cognito Authentication APIs and front end converted to a class
+## March 14th 2023 – *Cognito Authentication APIs and front end converted to a class*
 
 **TLDR;**
 - **Things Completed:** Cognito API simplified and converted to a class. API caller class made for calls to lambda functions
@@ -94,18 +94,18 @@ await api.method(params);
 
 The API Caller Methods use a private `#genericCall` function (outlined below) to make the actual request to the respective API endpoint. Each method submits the type of request (get or set), the endpoint path of the request, and the payload data for the request. This structure allows for the most compact class and method input size as possible.
 
----
+------
 
-## March 19th 2023 – Web Scraper for recipes redone
+## March 19th 2023 – *Web Scraper for recipes redone*
 
 **TLDR;**
 - **Things Completed:** The web scraper has been redone to work with more websites
 - **Issues:** We were restricted to using only one website with the original 
 - **Solutions:** We have made the webscraper more general purpose so that it works with more websites
 
----
+------
 
-## March 21st 2023 – Issue Loading data from S3 into FlatList and Global colour scheme implemented
+## March 21st 2023 – *Issue Loading data from S3 into FlatList and Global colour scheme implemented*
 
 **TLDR;**
 - **Things Completed:** Lambda functions for rating meals, saving meals, and signing up users getting. The API Caller class has been expanded to accommodate these new lambdas.
@@ -118,9 +118,9 @@ We had a set-back of around a day as the way we were rendering items in the flat
 
 Using promises works far better and much more consistently with React Native and it also allows for parallel API calls instead being restricted to only using sequential calls. This will allow us to massively decrease the response times of the app.
 
---- 
+------ 
 
-## March 22nd 2023 – Error Message information not being returned from async function correctly
+## March 22nd 2023 – *Error Message information not being returned from async function correctly*
 
 **TLDR;**
 - **Things Completed:** Most methods in the API caller class have been implemented. George has finished the redesign of the main meal card
@@ -158,9 +158,9 @@ async signIn(username, password) {
 
 Rejecting the error via a promise allows us to display the error message on screen along with red outlining of the text input box where there was an error.
 
---- 
+------ 
 
-## March 24th  2023 – Wrong structure of Neptune graph and database infrastructure
+## March 24th  2023 – *Wrong structure of Neptune graph and database infrastructure*
 
 **TLDR;**
 - **Things Completed:** 
@@ -177,9 +177,9 @@ Reconfiguring the Neptune API we already have will not take too long as we just 
 
 The final benefit of this is the ease of use of Neptune ML. With all our data and relationships being stored in the same place, it makes using machine learning far easier and much more accurate. Using Neptune ML with a relationship rich graph will greatly improve how we recommend meals to users and will allow a greater depth and mix of prediction types. We will also be able to use Neptune ML for future features such as ingredient substitution.
 
----
+------
 
-## March 29th 2023 – Major updates
+## March 29th 2023 – *Major updates*
 
 **TLDR;**
 - **Things Completed:** Internal Docs have been updated to reflect all our changes, recipe walk through design completed

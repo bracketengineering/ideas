@@ -1,6 +1,7 @@
 # November 2022
 
----
+------
+
 ## November 9th 2022 – *First Meeting*
 
 
@@ -15,7 +16,7 @@ Our current infrastructure plan is as follows: Kubernetes ran on Fargate through
 We are currently working on learning how to use Kubernetes, how we need to lay out data in the databases, and how to interact with the databases.
 
 
----
+------
 
 ## November 16th 2022 – *Revising Infrastructure*
 
@@ -27,7 +28,7 @@ Solution: Kubernetes are not needed as our system is not big enough plus they ar
 
 After looking over our current infrastructure, we realised that using Kubernetes would be more effort than it would be worth. Our system was not yet big enough or distributed enough to require Kubernetes. Originally, taking inspiration from how SnapChat’s infrastructure works, we were going to use Kubernetes ran on AWS Fargate through EKS. We found very quickly that this was going to be very expensive but also extremely time consuming to not only set up but also teach ourselves how to use Kubernetes. To save this time and money we are now looking at using Docker containers ran on AWS Fargate though ECS/ECR.
 
----
+------
 ## November 30th 2022 – *General update*
 
 
