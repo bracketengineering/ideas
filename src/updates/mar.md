@@ -36,7 +36,7 @@ await class.method(params);
 
 ------
 
-## March 5th 2023 – *Completed website*
+## March 5th 2023 – *Completed website*
 
 **TLDR;**
 - **Things Completed:** Landing page, Team about page, and Cookly page are completed
@@ -47,7 +47,7 @@ The landing page is a simple page with navigation links. The Team page just give
 
 ------
 
-## March 10th 2023 – *Code for Lambda functions now completed*
+## March 10th 2023 – *Code for Lambda functions now completed*
 
 **TLDR;**
 - **Things Completed:** High level lambda functions are now complete.
@@ -56,7 +56,7 @@ The landing page is a simple page with navigation links. The Team page just give
 
 ------
 
-## March 14th 2023 – *Cognito Authentication APIs and front end converted to a class*
+## March 14th 2023 – *Cognito Authentication APIs and front end converted to a class*
 
 **TLDR;**
 - **Things Completed:** Cognito API simplified and converted to a class. API caller class made for calls to lambda functions
@@ -96,8 +96,7 @@ The API Caller Methods use a private `#genericCall` function (outlined below) to
 
 ------
 
-## March 19th 2023 – 
-### *Web Scraper for recipes redone*
+## March 19th 2023 – *Web Scraper for recipes redone*
 
 **TLDR;**
 - **Things Completed:** The web scraper has been redone to work with more websites
@@ -106,8 +105,7 @@ The API Caller Methods use a private `#genericCall` function (outlined below) to
 
 ------
 
-## March 21st 2023 – 
-### *Issue Loading data from S3 into FlatList and Global colour scheme implemented*
+## March 21st 2023 – *Issue Loading data from S3 into FlatList and Global colour scheme implemented*
 
 **TLDR;**
 - **Things Completed:** Lambda functions for rating meals, saving meals, and signing up users getting. The API Caller class has been expanded to accommodate these new lambdas.
@@ -122,7 +120,7 @@ Using promises works far better and much more consistently with React Native and
 
 ------ 
 
-## March 22nd 2023 – *Error Message information not being returned from async function correctly*
+## March 22nd 2023 – *Error Message information not being returned from async function correctly*
 
 **TLDR;**
 - **Things Completed:** Most methods in the API caller class have been implemented. George has finished the redesign of the main meal card
@@ -162,7 +160,7 @@ Rejecting the error via a promise allows us to display the error message on scre
 
 ------ 
 
-## March 24th 2023 – *Wrong structure of Neptune graph and database infrastructure*
+## March 24th 2023 – *Wrong structure of Neptune graph and database infrastructure*
 
 **TLDR;**
 - **Things Completed:** 
