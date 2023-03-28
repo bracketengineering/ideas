@@ -96,7 +96,8 @@ The API Caller Methods use a private `#genericCall` function (outlined below) to
 
 ------
 
-## March 19th 2023 – *Web Scraper for recipes redone*
+## March 19th 2023 – 
+### *Web Scraper for recipes redone*
 
 **TLDR;**
 - **Things Completed:** The web scraper has been redone to work with more websites
@@ -105,7 +106,8 @@ The API Caller Methods use a private `#genericCall` function (outlined below) to
 
 ------
 
-## March 21st 2023 – *Issue Loading data from S3 into FlatList and Global colour scheme implemented*
+## March 21st 2023 – 
+### *Issue Loading data from S3 into FlatList and Global colour scheme implemented*
 
 **TLDR;**
 - **Things Completed:** Lambda functions for rating meals, saving meals, and signing up users getting. The API Caller class has been expanded to accommodate these new lambdas.
@@ -160,7 +162,7 @@ Rejecting the error via a promise allows us to display the error message on scre
 
 ------ 
 
-## March 24th  2023 – *Wrong structure of Neptune graph and database infrastructure*
+## March 24th 2023 – *Wrong structure of Neptune graph and database infrastructure*
 
 **TLDR;**
 - **Things Completed:** 
@@ -171,7 +173,7 @@ We have realised that the way we have configured our database infrastructure doe
 
 We will store, users, meals, and ingredients as nodes in Neptune, with the links between each node representing how they are related. See below for a more detailed overview
 
-![Neptune Structure](neptune_structure.png)
+![Neptune Structure](./neptune_structure.png)
 
 Reconfiguring the Neptune API we already have will not take too long as we just have to change which nodes and edges we are using, and not much of the underlying logic. This new structure also allows for a large performance increase as we can get virtually all the information we need from the graph in a single query. Moreover, as the graph scales, querying the database remain extremely fast. It also makes it extremely easy to add functionality for new features as we can just connect into to pre-existing data and relationships.  
 

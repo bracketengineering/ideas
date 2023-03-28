@@ -370,7 +370,8 @@ await api.method(params);
 </code></pre>
 <p>The API Caller Methods use a private <code>#genericCall</code> function (outlined below) to make the actual request to the respective API endpoint. Each method submits the type of request (get or set), the endpoint path of the request, and the payload data for the request. This structure allows for the most compact class and method input size as possible.</p>
 <hr />
-<p>## March 19th 2023 – <em>Web Scraper for recipes redone</em></p>
+<p>## March 19th 2023 – </p>
+<h3 id="web-scraper-for-recipes-redone"><a class="header" href="#web-scraper-for-recipes-redone"><em>Web Scraper for recipes redone</em></a></h3>
 <p><strong>TLDR;</strong></p>
 <ul>
 <li><strong>Things Completed:</strong> The web scraper has been redone to work with more websites</li>
@@ -378,7 +379,8 @@ await api.method(params);
 <li><strong>Solutions:</strong> We have made the webscraper more general purpose so that it works with more websites</li>
 </ul>
 <hr />
-<h2 id="march-21st-2023--issue-loading-data-from-s3-into-flatlist-and-global-colour-scheme-implemented"><a class="header" href="#march-21st-2023--issue-loading-data-from-s3-into-flatlist-and-global-colour-scheme-implemented">March 21st 2023 – <em>Issue Loading data from S3 into FlatList and Global colour scheme implemented</em></a></h2>
+<h2 id="march-21st-2023-"><a class="header" href="#march-21st-2023-">March 21st 2023 –</a></h2>
+<h3 id="issue-loading-data-from-s3-into-flatlist-and-global-colour-scheme-implemented"><a class="header" href="#issue-loading-data-from-s3-into-flatlist-and-global-colour-scheme-implemented"><em>Issue Loading data from S3 into FlatList and Global colour scheme implemented</em></a></h3>
 <p><strong>TLDR;</strong></p>
 <ul>
 <li><strong>Things Completed:</strong> Lambda functions for rating meals, saving meals, and signing up users getting. The API Caller class has been expanded to accommodate these new lambdas.</li>
@@ -422,7 +424,7 @@ async signIn(username, password) {
 </code></pre>
 <p>Rejecting the error via a promise allows us to display the error message on screen along with red outlining of the text input box where there was an error.</p>
 <hr />
-<p>## March 24th  2023 – <em>Wrong structure of Neptune graph and database infrastructure</em></p>
+<p>## March 24th 2023 – <em>Wrong structure of Neptune graph and database infrastructure</em></p>
 <p><strong>TLDR;</strong></p>
 <ul>
 <li><strong>Things Completed:</strong> </li>
@@ -431,7 +433,7 @@ async signIn(username, password) {
 </ul>
 <p>We have realised that the way we have configured our database infrastructure does not work well for when we want to add new features or ML capabilities. We would have to redo large parts of the system and large parts of the data would have to be duplicated as it is not connected correctly. Therefore, the best solution to this was to redesign Neptune. We are going to have virtually all data in Neptune except user and app metadata which will be stored in S3, and … in Dynamo DB</p>
 <p>We will store, users, meals, and ingredients as nodes in Neptune, with the links between each node representing how they are related. See below for a more detailed overview</p>
-<p><img src="updates/neptune_structure.png" alt="Neptune Structure" /></p>
+<p><img src="updates/./neptune_structure.png" alt="Neptune Structure" /></p>
 <p>Reconfiguring the Neptune API we already have will not take too long as we just have to change which nodes and edges we are using, and not much of the underlying logic. This new structure also allows for a large performance increase as we can get virtually all the information we need from the graph in a single query. Moreover, as the graph scales, querying the database remain extremely fast. It also makes it extremely easy to add functionality for new features as we can just connect into to pre-existing data and relationships.</p>
 <p>The final benefit of this is the ease of use of Neptune ML. With all our data and relationships being stored in the same place, it makes using machine learning far easier and much more accurate. Using Neptune ML with a relationship rich graph will greatly improve how we recommend meals to users and will allow a greater depth and mix of prediction types. We will also be able to use Neptune ML for future features such as ingredient substitution.</p>
 <hr />
