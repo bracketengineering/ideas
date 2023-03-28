@@ -321,7 +321,7 @@ await class.method(params);
 // then code to deal with result
 </code></pre>
 <hr />
-<p>## March 5th 2023 – <em>Completed website</em></p>
+<h2 id="march-5th-2023--completed-website"><a class="header" href="#march-5th-2023--completed-website">March 5th 2023 – <em>Completed website</em></a></h2>
 <p><strong>TLDR;</strong></p>
 <ul>
 <li><strong>Things Completed:</strong> Landing page, Team about page, and Cookly page are completed</li>
@@ -330,7 +330,7 @@ await class.method(params);
 </ul>
 <p>The landing page is a simple page with navigation links. The Team page just gives an overview who we all are and what our respective roles are within the company. The cookly page gives a product overview of the app; we are waiting on infographics from George to finish that bit completely</p>
 <hr />
-<p>## March 10th 2023 – <em>Code for Lambda functions now completed</em></p>
+<h2 id="march-10th-2023--code-for-lambda-functions-now-completed"><a class="header" href="#march-10th-2023--code-for-lambda-functions-now-completed">March 10th 2023 – <em>Code for Lambda functions now completed</em></a></h2>
 <p><strong>TLDR;</strong></p>
 <ul>
 <li><strong>Things Completed:</strong> High level lambda functions are now complete.</li>
@@ -338,7 +338,7 @@ await class.method(params);
 <li><strong>Solutions:</strong></li>
 </ul>
 <hr />
-<p>## March 14th 2023 – <em>Cognito Authentication APIs and front end converted to a class</em></p>
+<h2 id="march-14th-2023--cognito-authentication-apis-and-front-end-converted-to-a-class"><a class="header" href="#march-14th-2023--cognito-authentication-apis-and-front-end-converted-to-a-class">March 14th 2023 – <em>Cognito Authentication APIs and front end converted to a class</em></a></h2>
 <p><strong>TLDR;</strong></p>
 <ul>
 <li><strong>Things Completed:</strong> Cognito API simplified and converted to a class. API caller class made for calls to lambda functions</li>
@@ -370,8 +370,7 @@ await api.method(params);
 </code></pre>
 <p>The API Caller Methods use a private <code>#genericCall</code> function (outlined below) to make the actual request to the respective API endpoint. Each method submits the type of request (get or set), the endpoint path of the request, and the payload data for the request. This structure allows for the most compact class and method input size as possible.</p>
 <hr />
-<p>## March 19th 2023 – </p>
-<h3 id="web-scraper-for-recipes-redone"><a class="header" href="#web-scraper-for-recipes-redone"><em>Web Scraper for recipes redone</em></a></h3>
+<h2 id="march-19th-2023--web-scraper-for-recipes-redone"><a class="header" href="#march-19th-2023--web-scraper-for-recipes-redone">March 19th 2023 – <em>Web Scraper for recipes redone</em></a></h2>
 <p><strong>TLDR;</strong></p>
 <ul>
 <li><strong>Things Completed:</strong> The web scraper has been redone to work with more websites</li>
@@ -379,8 +378,7 @@ await api.method(params);
 <li><strong>Solutions:</strong> We have made the webscraper more general purpose so that it works with more websites</li>
 </ul>
 <hr />
-<h2 id="march-21st-2023-"><a class="header" href="#march-21st-2023-">March 21st 2023 –</a></h2>
-<h3 id="issue-loading-data-from-s3-into-flatlist-and-global-colour-scheme-implemented"><a class="header" href="#issue-loading-data-from-s3-into-flatlist-and-global-colour-scheme-implemented"><em>Issue Loading data from S3 into FlatList and Global colour scheme implemented</em></a></h3>
+<h2 id="march-21st-2023--issue-loading-data-from-s3-into-flatlist-and-global-colour-scheme-implemented"><a class="header" href="#march-21st-2023--issue-loading-data-from-s3-into-flatlist-and-global-colour-scheme-implemented">March 21st 2023 – <em>Issue Loading data from S3 into FlatList and Global colour scheme implemented</em></a></h2>
 <p><strong>TLDR;</strong></p>
 <ul>
 <li><strong>Things Completed:</strong> Lambda functions for rating meals, saving meals, and signing up users getting. The API Caller class has been expanded to accommodate these new lambdas.</li>
@@ -391,7 +389,7 @@ await api.method(params);
 <p>We had a set-back of around a day as the way we were rendering items in the flat list was not working with our async API calls. We also had a huge issue with using asynchronous calls within React Native components, so we decided to change to using promises. Instead of waiting for a function to return the actual promise before the next piece of code could be executed using async/await, which React Native does not like, Promises just return the promise object which <code>.then()</code> can then access but only when a promise has been returned. </p>
 <p>Using promises works far better and much more consistently with React Native and it also allows for parallel API calls instead being restricted to only using sequential calls. This will allow us to massively decrease the response times of the app.</p>
 <hr />
-<p>## March 22nd 2023 – <em>Error Message information not being returned from async function correctly</em></p>
+<h2 id="march-22nd-2023--error-message-information-not-being-returned-from-async-function-correctly"><a class="header" href="#march-22nd-2023--error-message-information-not-being-returned-from-async-function-correctly">March 22nd 2023 – <em>Error Message information not being returned from async function correctly</em></a></h2>
 <p><strong>TLDR;</strong></p>
 <ul>
 <li><strong>Things Completed:</strong> Most methods in the API caller class have been implemented. George has finished the redesign of the main meal card</li>
@@ -424,7 +422,7 @@ async signIn(username, password) {
 </code></pre>
 <p>Rejecting the error via a promise allows us to display the error message on screen along with red outlining of the text input box where there was an error.</p>
 <hr />
-<p>## March 24th 2023 – <em>Wrong structure of Neptune graph and database infrastructure</em></p>
+<h2 id="march-24th-2023--wrong-structure-of-neptune-graph-and-database-infrastructure"><a class="header" href="#march-24th-2023--wrong-structure-of-neptune-graph-and-database-infrastructure">March 24th 2023 – <em>Wrong structure of Neptune graph and database infrastructure</em></a></h2>
 <p><strong>TLDR;</strong></p>
 <ul>
 <li><strong>Things Completed:</strong> </li>
