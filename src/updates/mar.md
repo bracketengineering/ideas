@@ -173,7 +173,7 @@ We have realised that the way we have configured our database infrastructure doe
 
 We will store, users, meals, and ingredients as nodes in Neptune, with the links between each node representing how they are related. See below for a more detailed overview
 
-![Neptune Structure](./neptune_structure.png)
+![Neptune Structure](./neptune-structure.png)
 
 Reconfiguring the Neptune API we already have will not take too long as we just have to change which nodes and edges we are using, and not much of the underlying logic. This new structure also allows for a large performance increase as we can get virtually all the information we need from the graph in a single query. Moreover, as the graph scales, querying the database remain extremely fast. It also makes it extremely easy to add functionality for new features as we can just connect into to pre-existing data and relationships.  
 
