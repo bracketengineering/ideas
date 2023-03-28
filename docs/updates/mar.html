@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>March 2023 - Bracket Engineering Ideas</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../SMP/overview.html"><strong aria-hidden="true">1.</strong> System Managment Platform</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../SMP/tech_info.html"><strong aria-hidden="true">1.1.</strong> The Tech</a></li><li class="chapter-item expanded "><a href="../SMP/details.html"><strong aria-hidden="true">1.2.</strong> Details</a></li></ol></li><li class="chapter-item expanded "><a href="../CIaaS/overview.html"><strong aria-hidden="true">2.</strong> Cloud Infrastructure Drag and Drop(IaaS)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../CIaaS/tech.html"><strong aria-hidden="true">2.1.</strong> The Tech</a></li><li class="chapter-item expanded "><a href="../CIaaS/details.html"><strong aria-hidden="true">2.2.</strong> Details</a></li></ol></li><li class="chapter-item expanded "><a href="../updates/overview.html"><strong aria-hidden="true">3.</strong> Updates</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../updates/nov.html"><strong aria-hidden="true">3.1.</strong> November 2022</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> EXAM PERIOD</div></li><li class="chapter-item expanded "><a href="../updates/dec.html"><strong aria-hidden="true">3.3.</strong> December 2022</a></li><li class="chapter-item expanded "><a href="../updates/jan.html"><strong aria-hidden="true">3.4.</strong> January 2023</a></li><li class="chapter-item expanded "><a href="../updates/feb.html"><strong aria-hidden="true">3.5.</strong> February 2023</a></li><li class="chapter-item expanded "><a href="../updates/mar.html" class="active"><strong aria-hidden="true">3.6.</strong> March 2023</a></li><li class="chapter-item expanded "><a href="../updates/apr.html"><strong aria-hidden="true">3.7.</strong> April 2023</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Bracket Engineering Ideas</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="march-2023"><a class="header" href="#march-2023">March 2023</a></h1>
+<hr />
+<p>## March 1st 2023 – <em>All Low Level Backend APIs now configured as a class and all page design finished</em></p>
+<p><strong>TLDR;</strong>
+<strong>Things Completed:</strong> Converted the Dynamo, S3 and Neptune APIs to classes, all front end page design has been finished
+<strong>Issues:</strong> 
+<strong>Solutions:</strong></p>
+<p>We have converted the Dynamo, S3 and Neptune APIs to classes for ease of use and interoperability. It makes it far easier and neater to use in our Lambda functions. We will use these Classes via Layers in our Lambda functions</p>
+<p>All low level backend classes should be used as outlined in the following:</p>
+<pre><code class="language-JavaScript">/*
+Class Names:
+    dynamoDBClient for Dynamo
+    s3Client for S3
+    NeptuneClient for Neptune
+*/
+import ClassName from '/Layers/ClassName'
+
+const class = new ClassName();
+
+//promise
+class.method(params)
+    .then((result) =&gt; ...)
+
+//async 
+await class.method(params);
+// then code to deal with result
+</code></pre>
+<hr />
+<p>## March 5th 2023 – <em>Completed website</em></p>
+<p><strong>TLDR;</strong>
+<strong>Things Completed:</strong> Landing page, Team about page, and Cookly page are completed
+<strong>Issues:</strong> 
+<strong>Solutions:</strong></p>
+<p>The landing page is a simple page with navigation links. The Team page just gives an overview who we all are and what our respective roles are within the company. The cookly page gives a product overview of the app; we are waiting on infographics from George to finish that bit completely</p>
+<hr />
+<p>## March 10th 2023 – <strong>Code for Lambda functions now completed</strong></p>
+<p><strong>TLDR;</strong>
+<strong>Things Completed:</strong> High level lambda functions are now complete.
+<strong>Issues:</strong> 
+<strong>Solutions:</strong></p>
+<hr />
+<p>## March 14th 2023 – <em>Cognito Authentication APIs and front end converted to a class</em></p>
+<p><strong>TLDR;</strong>
+<strong>Things Completed:</strong> Cognito API simplified and converted to a class. API caller class made for calls to lambda functions
+<strong>Issues:</strong> 
+<strong>Solutions:</strong> </p>
+<p>Makes it far easier for George to implement authentication. Enables far easier error handling as the async functions are dealt with in the class. Amplify’s Auth Library is used to get the current user meaning George has to submit less information into the function calls leaving less room for error. 
+The Cognito class should be instantiated and used like the following:</p>
+<pre><code class="language-JavaScript">import CognitoAPI from '/apiScripts/amplify/CognitoAPI'
+
+const cognito = new Cognito();
+
+//promise
+cognito.method(params)
+    .then((result) =&gt; ...)
+</code></pre>
+<p>The API Caller class was created to enable extremely easy integration into the front end components. The API Caller class should be instantiated and used like the following.</p>
+<pre><code class="language-JavaScript">import APICaller from '/apiScripts/apiCalls/apiCaller'
+
+const api = new APICaller();
+
+//promise
+api.method(params)
+    .then((result) =&gt; ...)
+
+//async 
+await api.method(params);
+// then code to deal with result
+</code></pre>
+<p>The API Caller Methods use a private <code>#genericCall</code> function (outlined below) to make the actual request to the respective API endpoint. Each method submits the type of request (get or set), the endpoint path of the request, and the payload data for the request. This structure allows for the most compact class and method input size as possible.</p>
+<hr />
+<p>## March 19th 2023 – <em>Web Scraper for recipes redone</em></p>
+<p><strong>TLDR;</strong>
+<strong>Things Completed:</strong> The web scraper has been redone to work with more websites
+<strong>Issues:</strong> We were restricted to using only one website with the original 
+<strong>Solutions:</strong> We have made the webscraper more general purpose so that it works with more websites</p>
+<hr />
+<h2 id="march-21st-2023--issue-loading-data-from-s3-into-flatlist-and-global-colour-scheme-implemented"><a class="header" href="#march-21st-2023--issue-loading-data-from-s3-into-flatlist-and-global-colour-scheme-implemented">March 21st 2023 – <em>Issue Loading data from S3 into FlatList and Global colour scheme implemented</em></a></h2>
+<p><strong>TLDR;</strong>
+<strong>Things Completed:</strong> Lambda functions for rating meals, saving meals, and signing up users getting. The API Caller class has been expanded to accommodate these new lambdas.
+<strong>Issues:</strong> When creating a FlatList in the front end the way we were calling the back end was not working 
+<strong>Solutions:</strong> Promises, useEffect, flat list render function</p>
+<p>We have added lambda functions for rating meals, saving meals and signing up new users. The signing up users lambda function signs up a user via Amplify to Cognito but also creates a user node in Neptune and also sets a custom Cognito attribute as the Neptune ID so we can use the Neptune ID when making requests to the backend.</p>
+<p>We had a set-back of around a day as the way we were rendering items in the flat list was not working with our async API calls. We also had a huge issue with using asynchronous calls within React Native components, so we decided to change to using promises. Instead of waiting for a function to return the actual promise before the next piece of code could be executed using async/await, which React Native does not like, Promises just return the promise object which <code>.then()</code> can then access but only when a promise has been returned. </p>
+<p>Using promises works far better and much more consistently with React Native and it also allows for parallel API calls instead being restricted to only using sequential calls. This will allow us to massively decrease the response times of the app.</p>
+<hr />
+<p>## March 22nd 2023 – <em>Error Message information not being returned from async function correctly</em></p>
+<p><strong>TLDR;</strong>
+<strong>Things Completed:</strong> Most methods in the API caller class have been implemented. George has finished the redesign of the main meal card
+<strong>Issues:</strong> Errors being returned from try/catch blocks are not being displayed correctly in the front end
+Solution: Using promises ensures that errors are caught and can be returned so they can be shown on the screen.</p>
+<p>We implemented all of the main back end functionality into the front end. Images and text are all displayed correctly. The main issue we have run into is errors from Cognito not being displayed properly when returned via a try/catch async block. We found the solution to this was using a promise.</p>
+<p>Here is an example of the before and after:</p>
+<pre><code class="language-JavaScript">//BEFORE
+async signIn(username, password) {
+    try {
+        const user = await Auth.signIn(username, password);
+        return user;
+    } catch (error) {
+        console.log(&quot;error signing in&quot;, error);
+        return 0;
+    }
+}
+//AFTER
+async signIn(username, password) {
+    return new Promise(async (resolve, reject) =&gt; {
+       try {
+         const user = await Auth.signIn(username, password);
+         resolve(user);
+       } catch (error) {
+         reject(error);
+       }
+     });
+}
+</code></pre>
+<p>Rejecting the error via a promise allows us to display the error message on screen along with red outlining of the text input box where there was an error.</p>
+<hr />
+<p>## March 24th  2023 – <em>Wrong structure of Neptune graph and database infrastructure</em></p>
+<p><strong>TLDR;</strong>
+<strong>Things Completed:</strong> 
+<strong>Issues:</strong> Our current database infrastructure was poorly designed for easily adding features in the future, and the addition of machine learning infrastructure
+<strong>Solutions:</strong> Redesign our infrastructure to rely more on Neptune and redesign how we connect data</p>
+<p>We have realised that the way we have configured our database infrastructure does not work well for when we want to add new features or ML capabilities. We would have to redo large parts of the system and large parts of the data would have to be duplicated as it is not connected correctly. Therefore, the best solution to this was to redesign Neptune. We are going to have virtually all data in Neptune except user and app metadata which will be stored in S3, and … in Dynamo DB</p>
+<p>We will store, users, meals, and ingredients as nodes in Neptune, with the links between each node representing how they are related. See below for a more detailed overview</p>
+<p><img src="./neptune_structure.png" alt="Neptune Structure" /></p>
+<p>Reconfiguring the Neptune API we already have will not take too long as we just have to change which nodes and edges we are using, and not much of the underlying logic. This new structure also allows for a large performance increase as we can get virtually all the information we need from the graph in a single query. Moreover, as the graph scales, querying the database remain extremely fast. It also makes it extremely easy to add functionality for new features as we can just connect into to pre-existing data and relationships.</p>
+<p>The final benefit of this is the ease of use of Neptune ML. With all our data and relationships being stored in the same place, it makes using machine learning far easier and much more accurate. Using Neptune ML with a relationship rich graph will greatly improve how we recommend meals to users and will allow a greater depth and mix of prediction types. We will also be able to use Neptune ML for future features such as ingredient substitution.</p>
+<hr />
+<h2 id="march-29th-2023--major-updates"><a class="header" href="#march-29th-2023--major-updates">March 29th 2023 – <em>Major updates</em></a></h2>
+<p><strong>TLDR;</strong>
+<strong>Things Completed:</strong> Internal Docs have been updated to reflect all our changes, recipe walk through design completed
+<strong>Issues:</strong>
+<strong>Solutions:</strong></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../updates/feb.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../updates/apr.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../updates/feb.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../updates/apr.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
