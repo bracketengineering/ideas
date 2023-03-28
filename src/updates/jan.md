@@ -2,7 +2,7 @@
 
 ---
 
-## January 9th 2023 – *Update*
+## {January 9th 2023 – *Update*}
 
 **TLDR;**
 **Things Completed:** S3 API, Basic Neptune API to add, remove and update vertices. Plan for meal recommendations.

@@ -2,7 +2,7 @@
 
 ---
 
-## March 1st 2023: All Low Level Backend APIs now configured as a class and all page design finished
+## {March 1st 2023: All Low Level Backend APIs now configured as a class and all page design finished}
 
 **TLDR;**
 - **Things Completed:** Converted the Dynamo, S3 and Neptune APIs to classes, all front end page design has been finished
