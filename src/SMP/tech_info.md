@@ -2,7 +2,7 @@
 
 - The state of the entire system is verified via a hash chain
     - the hash chain will be formed via the `keccak256` of all of the state hashes of all of the devices in the system
-- on-device software written in C++ or Rust for speed
+- on-device software written in C++ for speed
 - built for the ARM architecture
 - our main platform will be built in JavaScript, C++, Python
     - Servers will be on-premises and backups on the cloud

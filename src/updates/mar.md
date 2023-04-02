@@ -178,10 +178,21 @@ Reconfiguring the Neptune API we already have will not take too long as we just 
 The final benefit of this is the ease of use of Neptune ML. With all our data and relationships being stored in the same place, it makes using machine learning far easier and much more accurate. Using Neptune ML with a relationship rich graph will greatly improve how we recommend meals to users and will allow a greater depth and mix of prediction types. We will also be able to use Neptune ML for future features such as ingredient substitution.
 
 
-## March 29th 2023 – *Major updates*
+## April 2nd 2023 – *Major updates*
 ------
 
 **TLDR;**
 - **Things Completed:** Internal Docs have been updated to reflect all our changes, recipe walk through design completed
-- **Issues:**
+- **Issues:** 
 - **Solutions:**
+
+Will has now completely reconfigured the Neptune Instance. He has rewritten the Neptune API and all of the Lambda functions to reflect
+the updated code. A number of new functions have also been implemented to expand functionality which are all outlined in the docs.
+
+George has finished coding the designs of the full meal page and recipe walk through. We are all now working on implementing the backend functionality. George has also made several infographics for the website which can be [seen here](https://www.bracket.software/projects).
+
+Xav has been working on implementing the explore page functionality, and completeting the final parts of the YC application.
+
+ 
+
+
