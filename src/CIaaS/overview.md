@@ -22,3 +22,10 @@ with support for multiple compute options, databases, APIs, VPCs and Machine Lea
     - Test their front-end platform with a mock backend
     - Test a configuration of cloud infrastructure with a wider system
     - Use to very easily configure a secure, powerful cloud infrastructure 
+
+## Competitive Advantage
+
+- The most intuative and easy to use UI/UX
+- Allowing complete customisation via our API 
+- Customisable cloud infrastructure templates
+- Massively lowering barrier to entry for start-ups, and smal/medium sized businesses
