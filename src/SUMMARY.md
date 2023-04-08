@@ -4,8 +4,6 @@
   - [The Tech](./SMP/tech_info.md)
   - [Details](./SMP/details.md)
 - [Cloud Infrastructure Drag and Drop(IaaS)](./CIaaS/overview.md)
-  - [The Tech](./CIaaS/tech.md)
-  - [Details](./CIaaS/details.md)
 - [Updates](./updates/overview.md)
   - [November 2022](./updates/nov.md)
   - [EXAM PERIOD]()
