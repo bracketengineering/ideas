@@ -26,4 +26,4 @@
 
 - Virtical farms that are monitored by sensors
 - Large company vehicle fleets that need to be monitored
-- Autonomous warehouse robots 
+- Autonomous warehouse robots
