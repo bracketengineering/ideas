@@ -1,6 +1,6 @@
 # Summary
 
-- [System Managment Platform](./SMP/overview.dd)
+- [System Managment Platform](./SMP/overview.md)
   - [The Tech](./SMP/tech_info.md)
   - [Details](./SMP/details.md)
 - [Cloud Infrastructure Drag and Drop(IaaS)](./CIaaS/overview.md)
