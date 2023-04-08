@@ -153,7 +153,7 @@
 <li>the hash chain will be formed via the <code>keccak256</code> of all of the state hashes of all of the devices in the system</li>
 </ul>
 </li>
-<li>on-device software written in C++ or Rust for speed</li>
+<li>on-device software written in C++ for speed</li>
 <li>built for the ARM architecture</li>
 <li>our main platform will be built in JavaScript, C++, Python
 <ul>
@@ -209,6 +209,38 @@ y^2 \mod p= (x^3 +7) \mod p
 </li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cloud-infrastructure-drag-and-dropiaas"><a class="header" href="#cloud-infrastructure-drag-and-dropiaas">Cloud Infrastructure Drag and Drop(IaaS)</a></h1>
+<h2 id="the-idea"><a class="header" href="#the-idea">The Idea</a></h2>
+<p>To put it simply, think of SquareSpace or WebFlow but for Cloud Infrastructure.</p>
+<p>## The Problem</p>
+<p>One of the largest barriers to entry for people starting out with cloud computing is knowing
+which services to use, how they all work, how to link them together, how to make your system secure, 
+and how to do all of this while optimising for cost and performance. </p>
+<p>## The solution</p>
+<p>We would build a platform that provided a drag and drop interface for the main cloud providers (AWS, Azure, GCP etc.),
+with support for multiple compute options, databases, APIs, VPCs and Machine Learning Integration.</p>
+<h2 id="use-cases"><a class="header" href="#use-cases">Use Cases</a></h2>
+<ul>
+<li>Start-Ups and other small/medium sized business that do not have a specialised DevOps/Cloud Architect</li>
+<li>Any Software Developer or Cloud Architect who works in any sized team who wants to:
+<ul>
+<li>Test their front-end platform with a mock backend</li>
+<li>Test a configuration of cloud infrastructure with a wider system</li>
+<li>Use to very easily configure a secure, powerful cloud infrastructure </li>
+</ul>
+</li>
+</ul>
+<p>## Competitive Advantage</p>
+<ul>
+<li>The most intuative and easy to use UI/UX</li>
+<li>Allowing complete customisation via our API </li>
+<li>Customisable cloud infrastructure templates</li>
+<li>Massively lowering barrier to entry for start-ups, and smal/medium sized businesses</li>
+</ul>
+<h2 id="the-future"><a class="header" href="#the-future">The Future</a></h2>
+<ul>
+<li>We would continue to provide support for more and more services </li>
+<li>We would add support for third-party integrations such as GitHub, Docker, Kubernetes, CI/CD pipelines, GitLab, and other IaaS platforms such as Terraform and Cloud Formation. This would allow greater interoprability of our platform into pre-existing systems</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="the-tech"><a class="header" href="#the-tech">The Tech</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="details"><a class="header" href="#details">Details</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="november-2022"><a class="header" href="#november-2022">November 2022</a></h1>
@@ -452,14 +484,18 @@ async signIn(username, password) {
 <p><img src="updates/./neptune-structure.png" alt="Neptune Structure" /></p>
 <p>Reconfiguring the Neptune API we already have will not take too long as we just have to change which nodes and edges we are using, and not much of the underlying logic. This new structure also allows for a large performance increase as we can get virtually all the information we need from the graph in a single query. Moreover, as the graph scales, querying the database remain extremely fast. It also makes it extremely easy to add functionality for new features as we can just connect into to pre-existing data and relationships.</p>
 <p>The final benefit of this is the ease of use of Neptune ML. With all our data and relationships being stored in the same place, it makes using machine learning far easier and much more accurate. Using Neptune ML with a relationship rich graph will greatly improve how we recommend meals to users and will allow a greater depth and mix of prediction types. We will also be able to use Neptune ML for future features such as ingredient substitution.</p>
-<h2 id="march-29th-2023--major-updates"><a class="header" href="#march-29th-2023--major-updates">March 29th 2023 – <em>Major updates</em></a></h2>
+<h2 id="april-2nd-2023--major-updates"><a class="header" href="#april-2nd-2023--major-updates">April 2nd 2023 – <em>Major updates</em></a></h2>
 <hr />
 <p><strong>TLDR;</strong></p>
 <ul>
 <li><strong>Things Completed:</strong> Internal Docs have been updated to reflect all our changes, recipe walk through design completed</li>
-<li><strong>Issues:</strong></li>
+<li><strong>Issues:</strong> </li>
 <li><strong>Solutions:</strong></li>
 </ul>
+<p>Will has now completely reconfigured the Neptune Instance. He has rewritten the Neptune API and all of the Lambda functions to reflect
+the updated code. A number of new functions have also been implemented to expand functionality which are all outlined in the docs.</p>
+<p>George has finished coding the designs of the full meal page and recipe walk through. We are all now working on implementing the backend functionality. George has also made several infographics for the website which can be <a href="https://www.bracket.software/projects">seen here</a>.</p>
+<p>Xav has been working on implementing the explore page functionality, and completeting the final parts of the YC application.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="april-2023"><a class="header" href="#april-2023">April 2023</a></h1>
 
                     </main>
