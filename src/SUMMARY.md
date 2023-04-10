@@ -1,10 +1,6 @@
 # Summary
 
 - [Welcome](./welcome.md)
-  - [System Managment Platform](./SMP/overview.md)
-    - [The Tech](./SMP/tech_info.md)
-    - [Details](./SMP/details.md)
-  - [Cloud Infrastructure Drag and Drop(IaaS)](./CIaaS/overview.md)
   - [Updates](./updates/overview.md)
     - [November 2022](./updates/nov.md)
     - [EXAM PERIOD]()
@@ -13,3 +9,8 @@
     - [February 2023](./updates/feb.md)
     - [March 2023](./updates/mar.md)
     - [April 2023](./updates/apr.md)
+  - [Other Ideas](./other.md)
+    - [System Managment Platform](./SMP/overview.md)
+      - [The Tech](./SMP/tech_info.md)
+      - [Details](./SMP/details.md)
+    - [Cloud Infrastructure Drag and Drop(IaaS)](./CIaaS/overview.md)
