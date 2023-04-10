@@ -13,4 +13,3 @@
     - [February 2023](./updates/feb.md)
     - [March 2023](./updates/mar.md)
     - [April 2023](./updates/apr.md)
-- [Back to website](https://www.bracket.software)
